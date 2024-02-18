@@ -56,6 +56,11 @@ for (const seat of seats) {
         setInnerText("total-price", priceUpdate);
         setInnerText("grand-price", grandPriceUpdate);
 
+        const nextBtn = document.getElementById('next-btn');
+        if(priceUpdate > 0){
+        nextBtn.removeAttribute('disabled');
+    } 
+
     });
 }
 
@@ -76,32 +81,14 @@ function applyCoupon(){
     }else{
         alert("Invalid Coupon Code")
     }
+    
 }
+
+
 function hideCouponSection(){
     const couponSection = document.getElementById("coupon-section");
     couponSection.style.display = "none";
 }
-
-
-//const couponInput = document.getElementById("coupon-input");
-//const grandPrice = document.getElementById("grand-price").innerText;
-//const grandPriceNumber = parent(grandPrice);
-
-//couponInput.addEventListener("keyup", function(event){
-   // const coupon = event.target.value;
-    
-    //const couponBtn = document.getElementById("coupon-btn");
-    //if(coupon === "NEW15"){
-//couponBtn.addEventListener("click", function(){
-      //      const discountPrice = grandPrice * 85 / 100;
-      //      setInnerText("grand-price", discountPrice);
-      //  });
-  //  }
-   // else{
-        
-   // }
-    
-//});
 
 
 function setInnerText(id, value) {
