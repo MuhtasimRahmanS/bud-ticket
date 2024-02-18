@@ -210,24 +210,22 @@
                             <h4 class="font-inter font-semibold">Class</h4>
                             <h4 class="font-inter font-semibold">Price</h4>
                         </div>
-                        <ul class="flex justify-between font-intel font-semibold text-[#32374299] mt-4">
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ul id="ticket-info" class=" font-intel font-semibold text-[#32374299] mt-4">
+                            
                         </ul>
                         <div class="flex justify-between border-t-2 border-[#b0b6c499] mt-4">
                             <h3 class="font-intel font-bold">Total Price</h3>
-                            <h3 id="total-price" class="font-intel font-bold">BDT <span>0</span></h3>
+                            <h3  class="font-intel font-bold">BDT <span id="total-price">0</span></h3>
                         </div>
 
-                        <label class="input flex items-center gap-2 my-4">
+                        <label id="coupon-section" class="input flex items-center gap-2 my-4">
                             <input type="text" id="coupon-input" class="grow border-0 outline-0" placeholder="Have any coupon?" />
-                            <button id="coupon-btn" class="py-2 px-4 bg-[#1DD100] rounded-xl text-white font-inter font-medium">Apply </button>
+                            <button id="coupon-btn" onclick="applyCoupon()" class="py-2 px-4 bg-[#1DD100] rounded-xl text-white font-inter font-medium">Apply </button>
                         </label>
 
                         <div class="flex justify-between mt-4">
                             <h3 class="font-intel font-bold">Grand Price</h3>
-                            <h3 id="grand-price" class="font-intel font-bold">BDT <span>0</span></h3>
+                            <h3  class="font-intel font-bold">BDT <span id="grand-price">0</span></h3>
                         </div>
                     </div>
                     <div class="font-inter">
@@ -237,7 +235,7 @@
                         <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full my-4" />
                         <h3 class="font-semibold">Email ID</h3>
                         <input type="email" placeholder="Enter your email id" class="input input-bordered w-full my-4" />
-                        <button class="btn btn-block bg-[#1DD100] text-white font-ralewat font-extrabold text-xl">Next</button>
+                        <a href="success.html"><button class="btn btn-block bg-[#1DD100] text-white font-ralewat font-extrabold text-xl">Next</button></a>
                         <div class="flex justify-around mt-4">
                             <span class="text-[#32374299] border-b-2">Terms and Conditions</span>
                             <span class="text-[#32374299] border-b-2">Cancellation Policy</span>
