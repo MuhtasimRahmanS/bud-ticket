@@ -16,6 +16,9 @@
         .font-inter{
             font-family: "Inter", sans-serif;
         }
+        input[type="number"]::-webkit-inner-spin-button{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -151,6 +154,104 @@
             </div>
         </div>
         <!--ph paribahan end-->
+
+
+        <!--ticket start-->
+        <section class="bg-[#F7F8F8]">
+            <div class="bg-white container mx-auto p-12 rounded-xl grid grid-flow-col">
+                <div class="pr-8 grid-cols-5 border-r-2 border-dashed border-[#b0b6c499]">
+                    <h2 class="text-2xl font-semibold font-raleway border-b-2 border-dashed border-[#b0b6c499] pb-4">Select Your Seat</h2>
+                    <div class="py-5 border-b-2 border-dashed border-[#b0b6c499] flex justify-between">
+                        <div class="flex space-x-3">
+                            <img class="border-2 border-dashed border-[#b0b6c499]"  src="images/seat-gray.png" alt="">
+                            <p class="font-inter font-semibold text-[#03071299]">Available</p>
+                        </div>
+                        <div class="flex space-x-3">
+                            <img class="border-2 border-dashed border-[#b0b6c499]"  src="images/seat-green-filled.png" alt="">
+                            <p class="font-inter font-semibold text-[#1DD100]">Selected</p>
+                        </div>
+                    </div>
+                    <div class="py-5 flex justify-end">
+                        <div class="rounded-xl flex justify-center py-3 bg-[#b0b6c499] w-24">
+                            <img src="images/Vector.png" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-8">
+                            <h4 class="font-inter font-semibold text-[#32374299]">A</h4>
+                            <button id="a1" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">A1</button>
+
+                            <button id="a2" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">A2</button>
+                        </div>
+                        <div class="space-x-8">
+                            <button id="a3" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">A3</button>
+
+
+                            <button id="a4" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">A4</button>
+                        </div>
+                    </div>
+
+
+                    <div class="flex justify-between items-center py-6">
+                        <div class="flex items-center space-x-8">
+                            <h4 class="font-inter font-semibold text-[#32374299]">B</h4>
+                            <button id="b1" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">B1</button>
+
+                            <button id="b2" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">B2</button>
+                        </div>
+                        <div class="space-x-8">
+                            <button id="b3" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">B3</button>
+
+
+                            <button id="b4" class="font-inter font-semibold text-[#32374299] bg-[#b0b6c499] w-40 rounded-xl text-center py-4">B4</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="grid-cols-3 pl-8">
+                    <h2 class="text-2xl font-semibold font-raleway border-b-2 border-dashed border-[#b0b6c499] pb-4">Select Your Seat</h2>
+
+                    <div class="bg-[#F7F8F8] p-8 rounded-xl my-6">
+                        <div class="flex justify-between border-b-2 border-dashed border-[#b0b6c499] pb-4">
+                            <h4 class="font-inter font-semibold">Seat <sup id="select-count" class="bg-[#1DD100] px-2 rounded-md text-white">0</sup></h4>
+                            <h4 class="font-inter font-semibold">Class</h4>
+                            <h4 class="font-inter font-semibold">Price</h4>
+                        </div>
+                        <ul class="flex justify-between font-intel font-semibold text-[#32374299] mt-4">
+                            <li>B2</li>
+                            <li>Economoy</li>
+                            <li>550</li>
+                        </ul>
+                        <div class="flex justify-between border-t-2 border-[#b0b6c499] mt-4">
+                            <h3 class="font-intel font-bold">Total Price</h3>
+                            <h3 id="total-price" class="font-intel font-bold">BDT <span>0</span></h3>
+                        </div>
+
+                        <label class="input flex items-center gap-2 my-4">
+                            <input type="text" id="coupon-input" class="grow border-0 outline-0" placeholder="Have any coupon?" />
+                            <button id="coupon-btn" class="py-2 px-4 bg-[#1DD100] rounded-xl text-white font-inter font-medium">Apply </button>
+                        </label>
+
+                        <div class="flex justify-between mt-4">
+                            <h3 class="font-intel font-bold">Grand Price</h3>
+                            <h3 id="grand-price" class="font-intel font-bold">BDT <span>0</span></h3>
+                        </div>
+                    </div>
+                    <div class="font-inter">
+                        <h3 class="font-semibold">Passanger Name*</h3>
+                        <input type="text" placeholder="Enter your name" class="input input-bordered w-full my-4" />
+                        <h3 class="font-semibold">Phone Number*</h3>
+                        <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full my-4" />
+                        <h3 class="font-semibold">Email ID</h3>
+                        <input type="email" placeholder="Enter your email id" class="input input-bordered w-full my-4" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--ticket end-->
+
     </main>
     <footer>
 
