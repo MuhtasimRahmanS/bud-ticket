@@ -57,10 +57,11 @@ for (const seat of seats) {
         setInnerText("grand-price", grandPriceUpdate);
 
         const nextBtn = document.getElementById('next-btn');
+        const phoneNumber = document.getElementById('phone-number').value;
         if(priceUpdate > 0){
         nextBtn.removeAttribute('disabled');
-    } 
-
+    }
+        
     });
 }
 
